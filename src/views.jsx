@@ -9,9 +9,12 @@ class Views extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" render={props => <Home {...props} />} />
-        <Route path="/login" render={props => <Login {...props} />} />
-        <Route path="/create" render={props => <CreateAccount {...props} />} />
+        <Route exact path="/" component={props => <Home {...props} />} />
+        <Route path="/login" component={props => <Login {...props} />} />
+        <Route
+          path="/create"
+          component={props => <CreateAccount {...props} />}
+        />
       </Switch>
     );
   }
