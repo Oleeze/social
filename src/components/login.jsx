@@ -21,15 +21,15 @@ class Login extends Component {
     return (
       <div className="SignUp">
         <h1>{this.state.status === false ? "Sign Up" : "Login"}</h1>
-        <form className="loginForm">
+        <form className="loginForm" action="/create" method="post">
           <label htmlFor="email">Email Address</label>
-          <input type="text" name="email" />
+          <input type="email" name="email" />
           <label htmlFor="password">Password</label>
-          <input type="text" name="password" />
+          <input type="password" name="password" />
           {this.state.status === false ? (
             <div>
               <label htmlFor="rePassword">Re Enter Password</label>
-              <input type="text" name="rePassword" />
+              <input type="password" name="rePassword" />
             </div>
           ) : (
             ""
