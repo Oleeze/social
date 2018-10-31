@@ -18,6 +18,11 @@ sequelize
 var User = sequelize.define('user', {
   email: {
     type: Sequelize.STRING,
+    allowNull: false,
+    unique: {
+      args: true,
+      msg: 'Oops. Looks like you already have an account with this email address. Please try to login.'
+    },
     validate: {
       isEmail: true
     }

@@ -7,6 +7,7 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import bodyParser from 'body-parser';
 import App from '../src/views.jsx';
+
 const router = require('./routes.js');
 
 const app = express();
@@ -28,6 +29,7 @@ app.get('*', (req, res) => {
 
   const html = `<html>
     <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     </head>
     <body>
       <div id="app">
